@@ -1,6 +1,10 @@
 import React, {useState} from 'react'
+import checkWinner from 'tic-tac-toe-detect-winner'
+
 const ai = require('tictactoe-complex-ai');
-const checkWinner = require('tic-tac-toe-detect-winner')
+
+
+
 
 let aiInstance = ai.createAI({level: 'expert', maxResponseTime: 200, minResponseTime: 200});
 
@@ -51,7 +55,7 @@ export const TicTacToe = ()=>{
 
 
 				var splitBoard = ([currentBoard.slice(0,3),currentBoard.slice(3,6),currentBoard.slice(6,9)])
-				var result = checkWinner.findWinner(splitBoard, 3)
+				var result = findWinner(splitBoard, 3)
 				console.log(result)
 				if(result.winnerDetected === true){
 					if(result.winnerSymbol ==='X'){
@@ -63,7 +67,7 @@ export const TicTacToe = ()=>{
 			})
 			.catch(()=>{				
 				var splitBoard = ([currentBoard.slice(0,3),currentBoard.slice(3,6),currentBoard.slice(6,9)])
-				var result = checkWinner.findWinner(splitBoard, 3)
+				var result = checkWinner(splitBoard, 3)
 				console.log(result)
 				if(result.type === 'draw game')
 					declareResult("Well Done! It's a Draw.")
