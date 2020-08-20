@@ -13,15 +13,16 @@ export const TicTacToe = ()=>{
 
 	const [board,changeBoard] = useState(['','','','','','','','',''])
 	const [result, declareResult] = useState('')
+	const [tries, changeTries] = useState(0)
 
 	const clearHandler = () => {
 		
 		changeBoard(['','','','','','','','',''])
 		declareResult('')
-
+		changeTries(tries + 1)
 		for(var i=0; i<=8; i+=1){
 			document.getElementById(i).innerHTML = ''	
-			document.getElementById(i).style.background = 'Gray'
+			document.getElementById(i).style.background = 'white'
 			document.getElementById(i).disabled = ''
 		}
 	}
@@ -84,23 +85,27 @@ export const TicTacToe = ()=>{
 	}
 
 	return(
-		<div className="my-5">
-			<h2> Here is a Tic Tac Toe game </h2>
-			<p> Rules are simple. It's you against me. If you want, I would give you a HUGE discount </p>
-			<h3 className="text-danger">{result!==''?result:''}</h3>
-			<button id={0} className="tictacttoe-button btn m-1 text-center text-white font-weight-bold" onClick={moveHandler} ></button>
-			<button id={1} className="tictacttoe-button btn m-1 text-center text-white font-weight-bold" onClick={moveHandler} ></button>
-			<button id={2} className="tictacttoe-button btn m-1 text-center text-white font-weight-bold" onClick={moveHandler} ></button>
-			<br />
-			<button id={3} className="tictacttoe-button btn m-1 text-center text-white font-weight-bold" onClick={moveHandler} ></button>
-			<button id={4} className="tictacttoe-button btn m-1 text-center text-white font-weight-bold" onClick={moveHandler} ></button>
-			<button id={5} className="tictacttoe-button btn m-1 text-center text-white font-weight-bold" onClick={moveHandler} ></button>
-			<br />
-			<button id={6} className="tictacttoe-button btn m-1 text-center text-white font-weight-bold" onClick={moveHandler} ></button>
-			<button id={7} className="tictacttoe-button btn m-1 text-center text-white font-weight-bold" onClick={moveHandler} ></button>
-			<button id={8} className="tictacttoe-button btn m-1 text-center text-white font-weight-bold" onClick={moveHandler} ></button>
-			<br />
-			<button className="btn btn-warning text-white font-weight-bold my-2 py-0 button-pill" onClick={clearHandler}> <small>Again? </small></button>
+		<div className="pt-5" id="tictactoe">
+			<div className="m-4">
+				<h2> Here is a <span className="text-danger" style={{fontSize: '1em'}}> Tic Tac Toe </span> game </h2>
+				<p> Rules are simple. It's you against me. If you want, I would give you a HUGE discount </p>
+				<h3 className="text-danger">{result!==''?result:''}</h3>
+				<button id={0} className="tictacttoe-button btn m-1 text-center text-white border font-weight-bold" onClick={moveHandler} ></button>
+				<button id={1} className="tictacttoe-button btn m-1 text-center text-white border font-weight-bold" onClick={moveHandler} ></button>
+				<button id={2} className="tictacttoe-button btn m-1 text-center text-white border font-weight-bold" onClick={moveHandler} ></button>
+				<br />
+				<button id={3} className="tictacttoe-button btn m-1 text-center text-white border font-weight-bold" onClick={moveHandler} ></button>
+				<button id={4} className="tictacttoe-button btn m-1 text-center text-white border font-weight-bold" onClick={moveHandler} ></button>
+				<button id={5} className="tictacttoe-button btn m-1 text-center text-white border font-weight-bold" onClick={moveHandler} ></button>
+				<br />
+				<button id={6} className="tictacttoe-button btn m-1 text-center text-white border font-weight-bold" onClick={moveHandler} ></button>
+				<button id={7} className="tictacttoe-button btn m-1 text-center text-white border font-weight-bold" onClick={moveHandler} ></button>
+				<button id={8} className="tictacttoe-button btn m-1 text-center text-white border font-weight-bold" onClick={moveHandler} ></button>
+				<br />
+				<button className="btn btn-light text-dark font-weight-bold mt-4 mb-2 py-0 button-pill" onClick={clearHandler}> again?</button>
+				<p> You tried {tries<=1?tries+' time':tries+' times'}  </p>
+			</div>
+			
 		</div>
 		)
 

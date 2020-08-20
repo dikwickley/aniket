@@ -10,7 +10,8 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "tic-tac-toe-detect-winner": "^1.0.2",
-    "tictactoe-complex-ai": "^1.0.1"
+    "tictactoe-complex-ai": "^1.0.1",
+    "typewriter-effect": "^2.13.1"
   },
   "scripts": {
     "start": "react-scripts start",

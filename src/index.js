@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import Typewriter from 'typewriter-effect';
 
 import {TicTacToe} from './components/TicTacToe'
 
@@ -13,8 +13,8 @@ const NavBar = (req, res) => {
 		<div id="navBar" className="container mx-0 mt-2 px-md-5 row col-12 font-weight-bolder fixed-top">
 				<div className="col-3 text-center"><a href="#"><span className="text-danger">ho</span><br />me</a></div>
 				<div className="col-3 text-center"><a href="#about"><span className="text-warning">ab</span><br />out </a></div>
-				<div className="col-3 text-center"><a href="#"><span className="text-success">pro</span><br />ject</a></div>
-				<div className="col-3 text-center"><a href="#"><span className="text-info">con</span><br />tact </a></div>
+				<div className="col-3 text-center"><a href="#project"><span className="text-success">pro</span><br />ject</a></div>
+				<div className="col-3 text-center"><a href="#contact"><span className="text-info">con</span><br />tact </a></div>
 
 		</div>
 		)
@@ -41,24 +41,141 @@ const Name =  (req, res) =>{
 const Main = (req, res) => {
 	return(
 		<div id="main" className="container-fluid p-0 m-0 row">
-			<div className="col-md-6 col-12">
+			<div className="col-md-6 col-12 ">
 				<Name />
 			</div>
 			<div className="col-md-6 col-12 text-center p-0">
-				<div className="container-fluid col-md-8 col-10 mt-md-3 mt-5 px-auto">
+				<div className="container-fluid col-md-8 col-10 mt-md-3 mt-0 px-auto">
 					<img src="./aniket.jpg" alt='aniket singh rawat' className="col-12" />
 				</div>
 				<div className="container text-left col-md-8 col-10 text-center pl-l0">
 					<div className="rotate line-height-small text-left"> 
-						<div className="font-size-small">HTML </div>
-						<div className="font-size-small">Express </div>
-						<div className="font-size-small">SQL </div>
-						<div className="font-size-small">MongoDB </div>
-						<div className="font-size-small">ReactJS </div>
-						<div className="font-size-small">CSS </div>
-						<div className="font-size-small">Javascript </div>
-						<div className="font-size-small">NodeJS </div>						
-						<div className="font-size-small">Python </div>
+						<div className="font-size-small"><Typewriter
+						  options={{
+						    delay: 200,
+						    cursor: '',
+						  }}
+						  onInit={(typewriter) => {
+						    typewriter.typeString('HTML')
+						      .callFunction(() => {
+						        console.log('String typed out!');
+						      })
+						      .pauseFor(2500)
+						      .start()
+						  }}
+						/> </div>
+						<div className="font-size-small"><Typewriter
+						  options={{
+						    delay: 200,
+						    cursor: '',
+						  }}
+						  onInit={(typewriter) => {
+						    typewriter.typeString('Express')
+						      .callFunction(() => {
+						        console.log('String typed out!');
+						      })
+						      .pauseFor(2500)
+						      .start()
+						  }}
+						/> </div>
+						<div className="font-size-small"><Typewriter
+						  options={{
+						    delay: 200,
+						    cursor: '',
+						  }}
+						  onInit={(typewriter) => {
+						    typewriter.typeString('SQL')
+						      .callFunction(() => {
+						        console.log('String typed out!');
+						      })
+						      .pauseFor(2500)
+						      .start()
+						  }}
+						/> </div>
+						<div className="font-size-small"><Typewriter
+						  options={{
+						    delay: 200,
+						    cursor: '',
+						  }}
+						  onInit={(typewriter) => {
+						    typewriter.typeString('MongoDB')
+						      .callFunction(() => {
+						        console.log('String typed out!');
+						      })
+						      .pauseFor(2500)
+						      .start()
+						  }}
+						/> </div>
+						<div className="font-size-small"><Typewriter
+						  options={{
+						    delay: 200,
+						    cursor: '',
+						  }}
+						  onInit={(typewriter) => {
+						    typewriter.typeString('ReactJS')
+						      .callFunction(() => {
+						        console.log('String typed out!');
+						      })
+						      .pauseFor(2500)
+						      .start()
+						  }}
+						/> </div>
+						<div className="font-size-small"><Typewriter
+						  options={{
+						    delay: 200,
+						    cursor: '',
+						  }}
+						  onInit={(typewriter) => {
+						    typewriter.typeString('CSS')
+						      .callFunction(() => {
+						        console.log('String typed out!');
+						      })
+						      .pauseFor(2500)
+						      .start()
+						  }}
+						/> </div>
+						<div className="font-size-small"><Typewriter
+						  options={{
+						    delay: 200,
+						    cursor: '',
+						  }}
+						  onInit={(typewriter) => {
+						    typewriter.typeString('Javascript')
+						      .callFunction(() => {
+						        console.log('String typed out!');
+						      })
+						      .pauseFor(2500)
+						      .start()
+						  }}
+						/> </div>
+						<div className="font-size-small"><Typewriter
+						  options={{
+						    delay: 200,
+						    cursor: '',
+						  }}
+						  onInit={(typewriter) => {
+						    typewriter.typeString('NodeJS')
+						      .callFunction(() => {
+						        console.log('String typed out!');
+						      })
+						      .pauseFor(2500)
+						      .start()
+						  }}
+						/> </div>
+						<div className="font-size-small"><Typewriter
+						  options={{
+						    delay: 200,
+						    cursor: '',
+						  }}
+						  onInit={(typewriter) => {
+						    typewriter.typeString('Python')
+						      .callFunction(() => {
+						        console.log('String typed out!');
+						      })
+						      .pauseFor(2500)
+						      .start()
+						  }}
+						/> </div>
 					</div>
 				</div>
 			
@@ -74,18 +191,19 @@ const Main = (req, res) => {
 const Me = (req, res) => {
 
 	return(
-		<div id="about"  className="container-fluid text-center my-5 py-5">
+		<div id="about"  className="container-fluid text-center py-5">
 			
-			<h1 className="mt-5 pt-5">me</h1>
-			<div>
-				<h6> I am a full stack web developer and  freelancer.
-				I help people make their website.
-				</h6>
-			</div>
-			<div className="mt-md-3 mt-2">
-				<h4>affordable. efficient. elegant.</h4>
-			</div>
-			
+				<h1 className="mt-5 pt-5">me</h1>
+				<div>
+					<h6> I am a full stack web developer and  freelancer.
+					I help people make their website.
+					</h6>
+				</div>
+				<div className="mt-md-3 mt-2">
+					<h4>affordable. efficient. elegant.</h4>
+				</div>
+
+				<a href="#tictactoe"><button className="btn btn-light py-0 px-3 mt-5 font-weight-bold" style={{borderRadius: '9999px'}}> down for a game? <i className="fa fa-chevron-circle-down"></i> </button></a>
 
 		</div>
 		)
@@ -99,6 +217,7 @@ const App = (req, res) => {
 	return(
 		<div className="container-fluid m-0 p-0">
 			<Main />
+			<div id="aboutparticles"></div>
 			<Me />
 			<div className="my-5 py-5 text-center">
 				<TicTacToe />

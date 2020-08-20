@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta
       name="description"
       content="Your average computer nerd"
@@ -58,13 +59,13 @@
       color: inherit;
     }
     a:hover{
-      color: #0275d8
+      /*color: #0275d8*/
 
     }
     .rotate{
       transform: rotate(90deg);
       position: relative;
-      top: -30px;
+      top: -40px;
       display: inline-block;
       line-height:40px;
     }
@@ -72,42 +73,50 @@
       font-size: 1.3em;
     }
     .text-shadow-black{
-       text-shadow: 2px 2px 6px #000000;
+       /*text-shadow: 2px 2px 6px #000000;*/
     }
     .text-shadow-grey{
-       text-shadow: 2px 2px 6px #C4c4c4;
+       /*text-shadow: 2px 2px 6px #C4c4c4;*/
     }
     .tictacttoe-button{
       height: 3em;
       width: 3em;
       border: none;
-      background: gray;
+      background: white;
     }
 
     .button-pill{
       border-radius: 9999px;
     }
-
-
+    #about{
+      height: 100vh;
+    }
+    #aboutparticles{
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      z-index: -1;
+    }
+    #tictactoe{
+      height: 100vh;
+    }
+    #main{
+      height: 100vh;
+    }
   </style>
   <body>
     <div id="nav"></div>
     <div id="root"></div>
   
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
 
 
   </body>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script type="text/javascript">
+    particlesJS.load('aboutparticles', 'aboutparticles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+
+  </script>
   
 </html>
