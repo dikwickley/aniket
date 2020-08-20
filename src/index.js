@@ -7,6 +7,14 @@ import {TicTacToe} from './components/TicTacToe'
 
 
 
+const Footer = () => {
+	return(
+		<div className="text-center">
+			<p className="text-dark font-weight-bold my-4">Copyright©{(new Date().getFullYear())} Aniket Singh Rawat. All rights reserved </p>
+		</div>
+		)
+}
+
 
 const NavBar = (req, res) => {
 	return(
@@ -246,6 +254,12 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+ReactDOM.render(
+	<div>
+		<Footer />
+	</div>,
+	document.getElementById('footer')
+);
 
 
 
