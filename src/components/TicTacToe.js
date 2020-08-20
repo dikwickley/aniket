@@ -42,6 +42,7 @@ export const TicTacToe = ()=>{
 			//AI Move
 			aiInstance.play(currentBoard)
 			.then(aiMove=>{
+				console.log('Getting AI Move')
 				// console.log('aiMove', aiMove)
 				currentBoard.splice(aiMove,1,'O')
 				document.getElementById(aiMove).innerHTML = 'O'	
@@ -51,7 +52,7 @@ export const TicTacToe = ()=>{
 
 				var splitBoard = ([currentBoard.slice(0,3),currentBoard.slice(3,6),currentBoard.slice(6,9)])
 				var result = checkWinner.findWinner(splitBoard, 3)
-				
+				console.log(result)
 				if(result.winnerDetected === true){
 					if(result.winnerSymbol ==='X'){
 						declareResult("Aweosome! You Won.")
@@ -60,8 +61,14 @@ export const TicTacToe = ()=>{
 					}
 				}
 			})
-			.catch(()=>{
-				declareResult("Wellplayed! It's a Draw.")
+			.catch(()=>{				
+				var splitBoard = ([currentBoard.slice(0,3),currentBoard.slice(3,6),currentBoard.slice(6,9)])
+				var result = checkWinner.findWinner(splitBoard, 3)
+				console.log(result)
+				if(result.type === 'draw game')
+					declareResult("Well Done! It's a Draw.")
+				else
+					console.log('Some Error Occured')
 			})
 		}
 		
