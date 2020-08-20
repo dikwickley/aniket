@@ -55,7 +55,7 @@ export const TicTacToe = ()=>{
 
 
 				var splitBoard = ([currentBoard.slice(0,3),currentBoard.slice(3,6),currentBoard.slice(6,9)])
-				var result = findWinner(splitBoard, 3)
+				var result = checkWinner(splitBoard, 3)
 				console.log(result)
 				if(result.winnerDetected === true){
 					if(result.winnerSymbol ==='X'){
