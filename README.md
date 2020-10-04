@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Link to Portfolio
+[I'm an inline-style link with title](https://aniket.dikwickley.vercel.app/ "Google's Homepage")
+
+# Built with
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
